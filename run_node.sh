@@ -18,8 +18,7 @@ if [ -n "${DOMAIN}" ]; then
 
     if ! [ -d "${LETSENCRYPT_PATH}" ]; then
         su -
-        #apt-get install sudo -y
-        apt install --no-install-recommends --no-deps -y certbot
+        apt install --no-install-recommends -y certbot
 
         certbot certonly\
             --non-interactive\
