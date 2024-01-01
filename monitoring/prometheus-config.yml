@@ -5,9 +5,9 @@ global:
     monitor: "Monitoring"
 
 scrape_configs:
-  - job_name: "nwaku"
+  - job_name: "go-waku"
     static_configs:
-    - targets: ["nwaku:8003"]
+    - targets: ["go-waku:8003"]
 
   - job_name: postgres-exporter
     static_configs:
