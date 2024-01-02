@@ -17,7 +17,8 @@ if [ -n "${DOMAIN}" ]; then
     LETSENCRYPT_PATH=/etc/letsencrypt/live/${DOMAIN}
 
     if ! [ -d "${LETSENCRYPT_PATH}" ]; then
-        apk add --no-cache certbot
+        su -
+        apt install --no-install-recommends -y certbot
 
         certbot certonly\
             --non-interactive\
